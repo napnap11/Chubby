@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/dumpscene.unity
+- path: Assets/Scenes/ChubbymakingScene.unity
   isLoaded: 1
   isActive: 1
