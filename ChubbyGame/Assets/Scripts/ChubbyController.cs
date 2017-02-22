@@ -5,17 +5,45 @@ using UnityEngine;
 public class ChubbyController : MonoBehaviour {
 
 	// Use this for initializatio
+	public enum Skill
+	{
+		Normal,Fire,Ice,Wind,Big,Small,Strong
+	};
+	public Skill mySkill;
+	public GameObject Fireball;
 	float speed;
 	void Start () {
+		//mySkill = Skill.Normal;
 		speed = 5f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		float x = Input.GetAxis ("Horizontal");
-		float z = Input.GetAxis ("Vertical");
-		float xx = x / Mathf.Sqrt(x * x + z * z);
-		float zz = z / Mathf.Sqrt(x * x + z * z);
-		transform.Translate (speed*xx*Time.deltaTime,0,speed*zz*Time.deltaTime);
+		Move ();
+		if (Input.GetKeyDown(KeyCode.X))
+			DoSkill ();
+	}
+	void Move(){
+		Vector3 move = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
+		if (move != Vector3.zero) {
+			transform.rotation = Quaternion.LookRotation (move);
+		}
+		//move = transform.TransformDirection (move);
+		transform.Translate (move*speed*Time.deltaTime,Space.World);
+
+	}
+	void DoSkill(){
+		switch (mySkill) {
+		case Skill.Normal:
+			break;
+		case Skill.Fire:
+			
+				GameObject myfireball = Instantiate (Fireball, this.transform.position, this.transform.rotation);
+				myfireball.GetComponent<Rigidbody> ().velocity = Fireball.transform.forward * 5f;
+				break;
+
+		default:
+			break;
+		}
 	}
 }
