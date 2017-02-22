@@ -12,7 +12,7 @@ public class FireballController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Time.time > t + 1)
+		if (Time.time > t + 0.6)
 			Destroy (this.gameObject);
 	}
 }
