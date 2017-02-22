@@ -37,9 +37,9 @@ public class ChubbyController : MonoBehaviour {
 		case Skill.Normal:
 			break;
 		case Skill.Fire:
-			
-				GameObject myfireball = Instantiate (Fireball, this.transform.position, this.transform.rotation);
-				myfireball.GetComponent<Rigidbody> ().velocity = Fireball.transform.forward * 5f;
+			GameObject myfireball = Instantiate (Fireball, this.transform.position+transform.forward*0.01f, this.transform.rotation);
+				myfireball.transform.rotation = transform.rotation;
+				myfireball.GetComponent<Rigidbody> ().velocity = transform.forward*20f;
 				break;
 
 		default:
