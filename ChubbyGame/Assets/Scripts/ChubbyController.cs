@@ -11,6 +11,7 @@ public class ChubbyController : MonoBehaviour {
 	};
 	public Skill mySkill;
 	public GameObject Fireball;
+	public GameObject Prefab;
 	float speed;
 	void Start () {
 		//mySkill = Skill.Normal;
@@ -37,10 +38,14 @@ public class ChubbyController : MonoBehaviour {
 		case Skill.Normal:
 			break;
 		case Skill.Fire:
-			GameObject myfireball = Instantiate (Fireball, this.transform.position+transform.forward*0.5f, this.transform.rotation);
+			/*GameObject myfireball = Instantiate (Fireball, this.transform.position+transform.forward*0.5f, this.transform.rotation);
 				myfireball.transform.rotation = transform.rotation;
 				myfireball.GetComponent<Rigidbody> ().velocity = transform.forward*20f;
-				break;
+			*/
+			GameObject myfireball = Instantiate (Prefab, this.transform.position + transform.forward * 0.5f, this.transform.rotation);
+			myfireball.transform.rotation = transform.rotation;
+			break;
+			
 
 		default:
 			break;

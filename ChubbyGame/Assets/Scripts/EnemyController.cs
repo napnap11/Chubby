@@ -23,8 +23,9 @@ public class EnemyController : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider other){
 		string type = other.gameObject.name;
+
 		switch (type) {
-		case "FireBall(Clone)":
+		case "FireBolt":
 			myStatus = status.burn;
 			this.gameObject.GetComponent<MeshRenderer> ().material = myMaterial [1];
 			break;
