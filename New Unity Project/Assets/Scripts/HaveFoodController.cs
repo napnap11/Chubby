@@ -15,11 +15,13 @@ public class HaveFoodController : MonoBehaviour {
 	private bool eating;
 	private int[] eatfood;
 	private bool burnt;
+	private AudioSource audio;
 	void Start () {
 		eating = false;
 		eatfood = new int[numFood];
 		TotalFood = numFood;
 		burnt = false;
+		audio = gameObject.GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -27,8 +29,11 @@ public class HaveFoodController : MonoBehaviour {
 		if (Type == 0) {
 			for (int i = 0; i < TotalFood; i++) {
 				if (eatfood [i] > 0) {
+					if (!audio.isPlaying)
+						audio.Play ();
 					Foods [i].gameObject.transform.position = Vector3.MoveTowards (Foods [i].transform.position, Eater.gameObject.transform.position, 5.5f * Time.deltaTime);
 					eatfood [i]++;
+
 					if (eatfood [i] == 40) {
 						Destroy (Foods [i].gameObject);
 						eatfood [i] = 0;
@@ -40,6 +45,9 @@ public class HaveFoodController : MonoBehaviour {
 		}
 		if (Type == 1 || Type == 3) {
 			if (eatfood [0] > 0) {
+
+				if (!audio.isPlaying)
+					audio.Play ();
 				gameObject.transform.position = Vector3.MoveTowards (transform.position, Eater.gameObject.transform.position, 5.5f * Time.deltaTime);
 				gameObject.transform.localScale -= gameObject.transform.localScale * 5.5f * Time.deltaTime;
 				if (++eatfood [0] == 40) {
