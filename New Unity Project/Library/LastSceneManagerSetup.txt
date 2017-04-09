@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Screens/MainMenu.unity
+=======
+- path: Assets/Cleared.unity
+>>>>>>> 1643377dd093867e56d7fc9a0e8358b9172ac103
   isLoaded: 1
   isActive: 1
 - path: Assets/Screens/Level1.unity
