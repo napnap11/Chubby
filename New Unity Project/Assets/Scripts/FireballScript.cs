@@ -7,6 +7,7 @@ public class FireballScript : MonoBehaviour {
 	// Use this for initialization
 	public int Direction;
 	public float timeleft;
+	public AudioSource soundHit;
 	private float speed;
 	private int hit;
 	private Animator animator;
@@ -55,5 +56,7 @@ public class FireballScript : MonoBehaviour {
 		hit = 1;
 		animator.SetBool ("Hit", true);
 		gameObject.GetComponent<BoxCollider> ().enabled = false;
+
+		soundHit.Play ();
 	}
 }
