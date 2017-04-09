@@ -30,8 +30,7 @@ public class ChubbyBoyController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		{
-
-			if (Input.GetKeyDown (KeyCode.Escape) && !pause)
+			if (Input.GetKeyDown (KeyCode.Escape))
 				Time.timeScale = 0;
 			Move ();
 			if (name == "ChubbyBoy")

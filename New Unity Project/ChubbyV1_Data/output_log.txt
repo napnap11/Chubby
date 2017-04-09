@@ -1,0 +1,53 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 820M                    (ID=0x1140)
+    Vendor:   NVIDIA
+    VRAM:     1996 MB
+    Driver:   10.18.13.5354
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Asus\Desktop\Game Midterm\Chubby\New Unity Project\ChubbyV1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Asus\Desktop\Game Midterm\Chubby\New Unity Project\ChubbyV1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Asus\Desktop\Game Midterm\Chubby\New Unity Project\ChubbyV1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Asus\Desktop\Game Midterm\Chubby\New Unity Project\ChubbyV1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Asus\Desktop\Game Midterm\Chubby\New Unity Project\ChubbyV1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Asus\Desktop\Game Midterm\Chubby\New Unity Project\ChubbyV1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Asus\Desktop\Game Midterm\Chubby\New Unity Project\ChubbyV1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Asus\Desktop\Game Midterm\Chubby\New Unity Project\ChubbyV1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Asus\Desktop\Game Midterm\Chubby\New Unity Project\ChubbyV1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\Asus\Desktop\Game Midterm\Chubby\New Unity Project\ChubbyV1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.238 seconds
+Platform assembly: C:\Users\Asus\Desktop\Game Midterm\Chubby\New Unity Project\ChubbyV1_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Asus\Desktop\Game Midterm\Chubby\New Unity Project\ChubbyV1_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.429699 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.675142 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 439.
+Total: 0.346633 ms (FindLiveObjects: 0.041521 ms CreateObjectMapping: 0.027525 ms MarkObjects: 0.268722 ms  DeleteObjects: 0.007931 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.702130 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1759.
+Total: 0.421745 ms (FindLiveObjects: 0.120831 ms CreateObjectMapping: 0.033123 ms MarkObjects: 0.255193 ms  DeleteObjects: 0.012129 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.197611 ms
+
+Unloading 114 unused Assets to reduce memory usage. Loaded Objects now: 472.
+Total: 0.871948 ms (FindLiveObjects: 0.055050 ms CreateObjectMapping: 0.040588 ms MarkObjects: 0.362962 ms  DeleteObjects: 0.412880 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.541643 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 440.
+Total: 0.321907 ms (FindLiveObjects: 0.050385 ms CreateObjectMapping: 0.024259 ms MarkObjects: 0.238864 ms  DeleteObjects: 0.007931 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 263c -> priority: 1 

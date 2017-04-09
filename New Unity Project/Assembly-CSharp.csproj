@@ -46,8 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Imported Assets\PyroParticles\Demo\DemoScript.cs" />
-     <Compile Include="Assets\Imported Assets\PyroParticles\Demo\DemoScriptEditor.cs" />
      <Compile Include="Assets\Imported Assets\PyroParticles\Prefab\Script\FireBaseScript.cs" />
      <Compile Include="Assets\Imported Assets\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
      <Compile Include="Assets\Imported Assets\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />

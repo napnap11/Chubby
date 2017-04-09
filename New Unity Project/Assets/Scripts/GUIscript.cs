@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GUIscript : MonoBehaviour {
 
 	// Use this for initialization
@@ -31,9 +31,9 @@ public class GUIscript : MonoBehaviour {
 		GUIStyle style = new GUIStyle ();
 		style.fontSize = 15;
 		int Score = PlayerPrefs.GetInt ("Score", 0);
-		if (Score == 32) {
-			style.fontSize = 60;
-			GUI.Label (new Rect (Screen.width / 3, Screen.height / 3, Screen.width / 6, Screen.height / 6), "LEVEL Clear",style);
+		if (Score >= 32) {
+			SceneManager.LoadScene ("Cleared", LoadSceneMode.Additive);
+			Time.timeScale = 0;
 		}
 		GUI.Label(new Rect(0,0,Screen.width/6,Screen.height/6),"Score : "+Score.ToString(),style);
 		int noPowerUp = PlayerPrefs.GetInt ("noPowerUp",0);

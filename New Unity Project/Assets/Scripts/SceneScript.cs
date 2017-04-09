@@ -14,29 +14,27 @@ public class SceneScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (this.gameObject.name == "ChubbyBoy") {
-			if (Input.GetKeyDown(KeyCode.Escape) && !pause) {
+			if (Input.GetKeyDown(KeyCode.Escape)) {
 				pause = true;
 				SceneManager.LoadScene("InGameMenu",LoadSceneMode.Additive);
+				Time.timeScale = 0;
 			}
 		}
 	}
 	public void LoadSelection(){
 		SceneManager.LoadScene ("LevelSelect");
-		SceneManager.UnloadSceneAsync ("MainMenu");
 	}
 	public void ToLevel(int level){
 		SceneManager.LoadScene ("Level"+level.ToString());
-		SceneManager.UnloadSceneAsync ("LevelSelect");
 	}
 	public void ToMainMenu(){
-		int index = SceneManager.GetActiveScene ().buildIndex;
 		SceneManager.LoadScene ("MainMenu");
-		SceneManager.UnloadSceneAsync (index);
 	}
 	public void Resume(){
-		SceneManager.UnloadSceneAsync ("InGameMenu");
 		pause = false;
 		Time.timeScale = 1;
+
+		SceneManager.UnloadSceneAsync ("InGameMenu");
 	}
 
 }
