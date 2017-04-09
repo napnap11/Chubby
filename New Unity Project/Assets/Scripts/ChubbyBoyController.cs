@@ -14,6 +14,7 @@ public class ChubbyBoyController : MonoBehaviour {
 	private int smalling;
 	private int power;
 	private int done;
+	public bool pause;
 	void Start () {
 		speed = 1.5f;
 		PlayerPrefs.DeleteAll ();
@@ -24,17 +25,25 @@ public class ChubbyBoyController : MonoBehaviour {
 		smalling = 0;
 		power = 0;
 		done = 0;
+		pause = false;
 	}
-	
 	// Update is called once per frame
 	void Update () {
-		Move ();
-		if(name == "ChubbyBoy") SkillCheck();
-		if(smalling !=0 || Bigging != 0) Changesize ();
-		if(power>0&&done==0) DoPower ();
-		if (done > 0) {
-			done++;
-			done %= 60;
+		{
+
+			if (Input.GetKeyDown (KeyCode.Escape) && !pause)
+				Time.timeScale = 0;
+			Move ();
+			if (name == "ChubbyBoy")
+				SkillCheck ();
+			if (smalling != 0 || Bigging != 0)
+				Changesize ();
+			if (power > 0 && done == 0)
+				DoPower ();
+			if (done > 0) {
+				done++;
+				done %= 60;
+			}
 		}
 	}
 	void DoPower(){

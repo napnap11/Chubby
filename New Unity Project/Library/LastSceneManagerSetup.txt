@@ -1,4 +1,13 @@
 sceneSetups:
-- path: Assets/InGameMenu.unity
+- path: Assets/Screens/MainMenu.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Screens/Level1.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Screens/InGameMenu.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Screens/LevelSelect.unity
+  isLoaded: 0
+  isActive: 0
